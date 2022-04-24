@@ -8,19 +8,22 @@ numPedido=-1
 
 
 numPedido= (int)(input("Dime un número: "))
-while (intentos < 0):
-    print("Este es el intento ", intentos")
+while (intentos > 0):
+    print("Este es el intento ", intentos )
     numPedido = (int)(input("Dime un número "))
 
-    if numAleatorio < numPedido:
-    print("El número es mayor ")
-    elif:
-    print("El número es menor")
-    else:
-        print("Muy bien")
+    intentos=intentos-1
+    if numPedido < numAleatorio:
+        print("El número es mayor")
+
+    if numPedido > numAleatorio:
+            print("El número es menor")
+    if numPedido==numAleatorio:
         break
 
-if (intentos>0):
+
+if (intentos==0):
     print("Te han sobrado ", intentos, " intentos")
-else:
     print("El número que tenías que adivinar era ",numAleatorio)
+else:
+    print("Acertaste, te han sobrado ", intentos, " intentos")
